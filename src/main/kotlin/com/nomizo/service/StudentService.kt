@@ -11,5 +11,5 @@ open class StudentService {
     @Autowired
     lateinit var studentRepo: StudentRepository
 
-   fun allStudents() = studentRepo.findAll()
+   fun findAllStudents() = studentRepo.findAll()
 }
