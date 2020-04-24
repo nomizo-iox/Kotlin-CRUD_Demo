@@ -11,5 +11,11 @@ open class StudentService {
     @Autowired
     lateinit var studentRepo: StudentRepository
 
-   fun findAllStudents() = studentRepo.findAll()
+   fun findAllStudents() : MutableIterable<Student> {
+       return studentRepo.findAll()
+   }
+
+    fun addStudent(student: Student): Student {
+        return studentRepo.save(student)
+    }
 }
